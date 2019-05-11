@@ -1,4 +1,5 @@
 import turtle
+import random
 
 class Circuito():
     corredores = []
@@ -25,8 +26,17 @@ class Circuito():
 
     def competir(self):
         
+        hayGanador = False
+        
+        while not hayGanador:
+            for tortuga in self.corredores:
+                avance = random.randint(1,6)
+                tortuga.forward(avance)
 
-
-# si lo ejecutamos desde el terminal, no como módulo
+                #if tortuga self.__finishline:
+                #    hayGanador = True
+                    
+# Si lo ejecutamos desde el terminal, no como módulo
 if __name__ == '__main__':
     circuito = Circuito(640, 480)
+    circuito.competir()
