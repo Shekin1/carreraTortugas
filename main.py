@@ -23,7 +23,8 @@ class Circuito():
             new_turtle.setpos(self.__startline, self.__posStartY[i])            
             self.corredores.append(new_turtle)
 
-
+    def competir(self):
+        
 
 
 # si lo ejecutamos desde el terminal, no como módulo
