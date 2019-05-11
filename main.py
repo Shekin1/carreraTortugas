@@ -33,9 +33,10 @@ class Circuito():
                 avance = random.randint(1,6)
                 tortuga.forward(avance)
 
-                #if tortuga self.__finishline:
-                #    hayGanador = True
-                    
+                if tortuga.position()[0] >= self.__finishline:
+                    hayGanador = True
+                    print("La tortuga de color {} ha ganado".format(tortuga.color()[0]))
+
 # Si lo ejecutamos desde el terminal, no como módulo
 if __name__ == '__main__':
     circuito = Circuito(640, 480)
